@@ -56,7 +56,7 @@ pipeline {
 			steps {
 				//"docker Build -t mhvuillaume/currency-exchange-devops:$BUILD_TAG"
 				script {
-					dockerImage = docker.build("mhvuillaume/currency-exchange-devops:$env{BUILD_TAG}")
+					dockerImage = docker.build("mhvuillaume/currency-exchange-devops:${env.BUILD_TAG}")
 				}
 			}
 		}
